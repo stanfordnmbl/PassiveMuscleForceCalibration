@@ -30,17 +30,18 @@ Three example results are included. We include a solution that converged using r
 
 ![passiveCurves](https://github.com/stanfordnmbl/PassiveMuscleForceCalibration/blob/main/helperFunctions/fig_UpdatedPassiveCurves.png?raw=true)
 <br>
-_Sagittal plane passive joint moment curves for the hip, knee, and ankle. Calibration improved the agreement in passive joint moments between the Rajagopal et al.35 model and experimentally-measured moments from Silder et al.55. Each joint was moved over the shown range of motion with other joints fixed at various angles (see Silder et al.). For example, the hip was moved from 15° of extension to 37° of flexion (left) with the knee fixed at 15° (blue) and 60° (red)._ 
+_Sagittal plane passive joint moment curves for the hip, knee, and ankle. Calibration improved the agreement in passive joint moments between the Rajagopal et al. model and experimentally-measured moments from Silder et al.55. Each joint was moved over the shown range of motion with other joints fixed at various angles (see Silder et al.). For example, the hip was moved from 15° of extension to 37° of flexion (left) with the knee fixed at 15° (blue) and 60° (red)._ 
 <br>
 <br>
-![groupMuscleUpdates](https://github.com/stanfordnmbl/PassiveMuscleForceCalibration/blob/main/helperFunctions/fig_updatedMuscleGroupParameters.jpg?raw=true)
+![groupMuscleUpdates](https://github.com/stanfordnmbl/PassiveMuscleForceCalibration/blob/main/helperFunctions/fig_updatedMuscleGroupParameters.jpg)
 <br>
 _Calibrated normalized muscle fiber lengths that parameterize the passive muscle force curve for sagittal plane muscle groups. At F^m=0, the default l^m⁄(l_o^m )=1, F^m=F_o^m, the default l^m⁄(l_o^m )=1.7. Muscle groupings are defined in Table S1. With the exception of the hip flexors, most muscle groups begin generating passive force at a longer fiber length after calibration._
 
 <br>
 <br>
 
-_Calibrated muscle fiber lengths that parameterize the passive muscle force curve for each muscle in the Rajagopal et al.35 model._
+_Calibrated muscle fiber lengths that parameterize the passive muscle force curve for each muscle in the Rajagopal et al. model._
+<br>
 ![indivMuscleUpdateTable](https://github.com/stanfordnmbl/PassiveMuscleForceCalibration/blob/main/helperFunctions/fig_MuscleParameterTable.JPG?raw=true)
 
 
