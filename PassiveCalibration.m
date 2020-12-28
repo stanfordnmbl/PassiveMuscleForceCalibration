@@ -26,7 +26,7 @@ silderCoordRanges = [-15 40 ; 0 75 ; -30 30] ; % 3x2 - coordinate upper and lowe
 silderDownsamplingFactor = 4 ; % Desired number of data points to skip in Silder digitized data. With 1, curves go by each degree.
 
 paramsToModify = [1,2] ; %Muscle Parameters to modify [strainAtZeroForce,strainAtOneNormForce,stiffnessAtLowForce,stiffnessAtOneNormForce,Curviness] 
-paramMultiplierRange = [-.2 .2; .5 .9] ; % nParameters x 2
+paramRange = [-.2 .2; .5 .9] ; % nParameters x 2
 
 sagCoordNames = {'hip_flexion_r','knee_angle_r','ankle_angle_r'} ; % in the order hip, knee, ankle to match Silder data
 calibrateAllMuscles = true ; % true if calibrating al muscles, false if using a subset defined in muscles2Calibrate cel
@@ -152,8 +152,8 @@ modelMomentsInitial = computeModelPassiveMoments(params,passiveValsInitial) ;
 
 %% Initialize design variable matrix, constraints, bounds
 
-lb = ones(nModifyMuscles,1)*paramMultiplierRange(:,1)' ;
-ub = ones(nModifyMuscles,1)*paramMultiplierRange(:,2)' ;
+lb = ones(nModifyMuscles,1)*paramRange(:,1)' ;
+ub = ones(nModifyMuscles,1)*paramRange(:,2)' ;
 
 try
     load(initialGuessFile)
