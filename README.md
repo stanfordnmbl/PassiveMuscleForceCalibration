@@ -10,7 +10,7 @@ The muscles in the Rajagopal2015 Full Body Model in OpenSim generate large passi
 <br>
 <br>
 ## Running the Code
-Clone the repo and run PassiveCalibration.m. Below is a description of some of the options in the code:
+Clone the repository and run PassiveCalibration.m. Below is a description of some of the options in the code:
 
 * Use an initial guess (_initialGuessFile_ variable) for the optimization. Several examples are included in the PreviousResults folder.
 * Change the joint angle ranges over which to calibrate the muscle parameters (_silderCoordRanges_ variable). You may want to tune these towards the activity of interest in your simulation. The current settings are for walking.
