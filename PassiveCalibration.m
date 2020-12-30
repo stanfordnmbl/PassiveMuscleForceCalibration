@@ -15,9 +15,9 @@ ModelVisualizer.addDirToGeometrySearchPaths([myDir '\Geometry\']) ; % Add Rajago
 
 %% Modifiable Parameters
 modelPath = [myDir '\Rajagopal_modifiedAbductors.osim'] ; % full path to model
-updatedModelName = ['\Rajagopal_modifiedAbductors_passiveCal.osim'] ; % file name for new model - will be in resultsFolder
+updatedModelName = 'Rajagopal_modifiedAbductors_passiveCal.osim' ; % file name for new model - will be in resultsFolder
 silderDataPath = [myDir '\DigitizedPassiveMoments_Silder2007.mat'] ; % full path to Silder data
-initialGuessFile = [myDir '\PreviousResults\RigidTendon\initialGuess.mat'] ; %Initial guess from previous optimization. Comment if you want to start from default values.
+initialGuessFile = [myDir '\PreviousResults\RigidTendon\initialGuess.mat'] ; %Initial guess from previous optimization. Comment this out if you want to start from default values.
 resultsFolder = [myDir '\Results\'] ; % The folder where you want your results and initial guess saved
 
 silderCoordRanges = [-15 40 ; 0 75 ; -30 30] ; % 3x2 - coordinate upper and lower limits in degrees. 
@@ -25,7 +25,7 @@ silderCoordRanges = [-15 40 ; 0 75 ; -30 30] ; % 3x2 - coordinate upper and lowe
                                                % hip flexion, knee flexion, ankle dorsiflexion
 silderDownsamplingFactor = 4 ; % Desired number of data points to skip in Silder digitized data. With 1, curves go by each degree.
 
-paramsToModify = [1,2] ; %Muscle Parameters to modify [strainAtZeroForce,strainAtOneNormForce,stiffnessAtLowForce,stiffnessAtOneNormForce,Curviness] 
+paramsToModify = [1,2] ; % Muscle Parameters to modify [strainAtZeroForce,strainAtOneNormForce,stiffnessAtLowForce,stiffnessAtOneNormForce,Curviness] 
 paramRange = [-.2 .2; .5 .9] ; % nParameters x 2
 
 sagCoordNames = {'hip_flexion_r','knee_angle_r','ankle_angle_r'} ; % in the order hip, knee, ankle to match Silder data
@@ -35,15 +35,16 @@ ignoreTendonCompliance = true ; % True for rigid tendon assumption. It can be he
                                 % an initial guess for an optimization that uses compliant tendons (slow).
 maxOptIterations = 2 ;  % make this small to prototype (3-4 iterations), likely requires several hundred iterations to converge
 
-%Weights for terms in the cost function
+% Weights for terms in the cost function
 params.w_regularization = 1 ; %cost function weight on multiplier terms being different from their original
 params.w_torqueError = 2 ; % cost function weight on torque error
 
-%For just plotting plot a previous solution
+% For just plotting plot a previous solution. You need correct settings
+% above (like tendon compliance). For the default example below,
+% ignoreTendonComplaince = false
 justPlotSolution = false ; % True if you want to skip optimization and just plot a saved solution
 outputForPlotting = [myDir '\PreviousResults\CalibratedModelForPaper\passiveCalOutput.mat'] ; % Specify path to output file for plotting
 initialGuessForPlotting = [myDir '\PreviousResults\CalibratedModelForPaper\initialGuess.mat'] ; % path to initialGuess.mat file for plotting
-
 % % % End user inputs % % %
 
 %% Get Passive Moments from Silder 2007
