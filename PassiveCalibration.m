@@ -39,7 +39,7 @@ maxOptIterations = 2 ;  % make this small to prototype (3-4 iterations), likely 
 params.w_regularization = 1 ; %cost function weight on multiplier terms being different from their original
 params.w_torqueError = 2 ; % cost function weight on torque error
 
-% For just plotting plot a previous solution. You need correct settings
+% For just plotting a previous solution. You need correct settings
 % above (like tendon compliance). For the default example below,
 % ignoreTendonComplaince = false
 justPlotSolution = false ; % True if you want to skip optimization and just plot a saved solution
