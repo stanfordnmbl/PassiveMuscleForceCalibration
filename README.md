@@ -1,5 +1,5 @@
 # Calibration of Passive Muscle Force Curves in OpenSim Musculoskeletal Models
-Calibrates the passive muscle forces in an OpenSim model based on experimentally-collected passive joint moments from Silder et al. 2007. This procedure is detailed in the Supplemental Materials of Uhlrich et al., 2021. 
+Calibrates the passive muscle forces in an OpenSim model based on experimentally-collected passive joint moments from Silder et al. 2007. This procedure is detailed in the Supplemental Materials of Uhlrich et al., 2022. 
 
 ## Publications
 Please cite:<br>
