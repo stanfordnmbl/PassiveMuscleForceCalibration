@@ -5,7 +5,12 @@
 % functionality with the Thelen muscles. 
 
 % Written by Scott Uhlrich. 12/28/2020. Stanford University. Please contact
-% suhlrich@stanford.edu for questions and citation information.
+% suhlrich@stanford.edu for questions, and cite our paper if you use this code in your work.
+
+% Citation:
+% Uhlrich, S.D., Jackson, R.W., Seth, A. et al. Muscle coordination retraining inspired by 
+% musculoskeletal simulations reduces knee contact force. Sci Rep 12, 9842 (2022). 
+% https://doi.org/10.1038/s41598-022-13386-9
 
 clc; clear all; close all; format compact
 import org.opensim.modeling.*
@@ -271,7 +276,7 @@ set(gcf,'DefaultTextFontName','Arial','defaultAxesFontName','Arial')
 indsJoint.j1 = find(silderMoments(:,1)) ;
 indsJoint.j2 = find(silderMoments(:,2)) ;
 indsJoint.j3 = find(silderMoments(:,3)) ;
-xLabels = {'hip flexion angle (°)','knee flexion angle (°)','ankle dorsiflexion angle (°)'} ;
+xLabels = {'hip flexion angle (Â°)','knee flexion angle (Â°)','ankle dorsiflexion angle (Â°)'} ;
 yLimits = [-33 40;-50 25;-55 7] ;
 yTickVals = {-20:20:40,-50:25:25,-60:15:0} ;
 
